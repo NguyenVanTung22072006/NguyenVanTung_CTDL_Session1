@@ -1,33 +1,16 @@
-//Bai-1
-
 #include <stdio.h>
 
-int main() {
-    for (int i = 0; i < n; i++) {
-        printf("Hello\n");
+// Cach 1
+int sum_1(int n) {
+    int total = 0;
+    for (int i = 1; i <= n; i++) {
+        total += i;
     }
-    return 0;
-} // Do phuc tap thoi gian: O(n)
+    return total;
+}// Do phuc tap khong gian: O(1)
 
 
-
-//Bai-2
-
-void printDouble(int n) {
-    int i = 1;
-    while (i < n) {
-        printf("%d\n", i);
-        i *= 2;
-    }
-} // Do phuc tap thoi gian: O(log n)
-
-
-//Bai-3
-
-int* mallocArray(int n) {
-    int* arr = (int*)malloc(n * sizeof(int));
-    for (int i = 0; i < n; i++) {
-        arr[i] = i;
-    }
-    return arr;
-} // Do phuc tap khong gian: O(n)
+// Cach 2
+int sum_2(int n) {
+    return n * (n + 1) / 2;
+}// Do phuc tap khong gian: O(1)
